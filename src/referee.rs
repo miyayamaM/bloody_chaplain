@@ -77,7 +77,7 @@ impl Referee {
     } else {
       println!("ハズレーーーーー");
       let index = self.candidates.iter().position(|x| *x == called_number).unwrap();
-      self.candidates.remove(index);
+      self.candidates[index] = 0;
     }
     thread::sleep(time::Duration::from_millis(2000));
     is_correct

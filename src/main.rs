@@ -29,7 +29,6 @@ fn main() {
         bot.update_candidates(called_number);
 
         //botが数字をcall
-        println!("{:?}", bot.call_candidates);
         let bot_called = bot.call_number();
         bot.update_candidates(bot_called);
 
