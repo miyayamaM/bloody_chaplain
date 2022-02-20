@@ -19,7 +19,7 @@ impl Referee {
     loop {
       println!("1~10までの数字を選んでね");
       your_number = match Referee::input_int() {
-          Ok(number) if number < 11 => number,
+          Ok(number) if number < 11 && number > 0 => number,
           _ => {
               println!("[不正な値です]1~10までの数字を選んでください");
               continue;
